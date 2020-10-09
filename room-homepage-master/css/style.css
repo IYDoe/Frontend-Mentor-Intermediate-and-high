@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 12px;
+  font-family: "Spartan", sans-serif;
+  color: var(--clr-Very-Dark-Gray);
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* Colors =============================== */
+:root {
+  --clr-Dark-Gray: hsl(0, 0%, 63%);
+  --clr-Black: hsl(0, 0%, 0%);
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+/* Top section ============================= */
+.top-section {
+  display: flex;
+}
+/* Header ================================ */
+.header {
+  display: flex;
+  padding: 5rem 5rem;
+  display: flex;
+  align-items: flex-start;
+  text-transform: lowercase;
+  background: url(../images/desktop-image-hero-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60%;
+  position: relative;
+  height: 65vh;
+}
+.header__logo {
+  margin-right: 5rem;
+}
+.header__nav a {
+  color: var(--clr-White);
+  margin-right: 3rem;
+  position: relative;
+  font-size: 1.3em;
+}
+.header__nav a:after {
+  position: absolute;
+  content: "";
+  height: 0.1rem;
+  width: 1.6rem;
+  z-index: 2;
+  bottom: -8px;
+  left: calc(50% - 7px);
+  background: transparent;
+  transition: all 0.3s linear;
+}
+.header__nav a:hover:after {
+  background: var(--clr-White);
+}
+/* Burger ==================================== */
+.header__burger {
+  display: none;
+  cursor: pointer;
+}
+/* Buttons =================================== */
+.btns {
+  right: 0;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  transform: translateX(100%);
+}
+.btns__btn--prev {
+  display: inline-block;
+  border-style: none;
+  height: 5vw;
+  width: 5vw;
+  background-color: var(--clr-Black);
+  transition: all 0.2s linear;
+}
+.btns__btn--prev:hover {
+  background-color: var(--clr-Very-Dark-Gray);
+}
+.btns__btn--next {
+  display: inline-block;
+  border-style: none;
+  height: 5vw;
+  width: 5vw;
+  background-color: var(--clr-Black);
+  transition: all 0.2s linear;
+}
+.btns__btn--next:hover {
+  background-color: var(--clr-Very-Dark-Gray);
+}
+/* Right sectin ======================= */
+.right-part {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.content {
+  display: none;
+}
+.content.active {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+.content__title {
+  color: var(--clr-Black);
+  font-size: 3em;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+.content__text {
+  color: var(--clr-Dark-Gray);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.content__link {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 0.9em;
+  color: var(--clr-Black);
+  transition: all 0.2s linear;
+}
+.content__link path {
+  transition: all 0.2s linear;
+}
+.content__link:hover {
+  color: var(--clr-Dark-Gray);
+}
+.content__link:hover path {
+  fill: var(--clr-Dark-Gray);
+}
+.content__link svg {
+  margin-left: 15px;
+}
+
+/* Footer ==================================== */
+.footer {
+  display: flex;
+  height: 35vh;
+}
+.footer-image {
+  display: flex;
+  width: 30%;
+}
+.footer-image--left {
+  background-image: url(../images/image-about-dark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.footer-image--right {
+  background-image: url(../images/image-about-light.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.footer-content {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content-wrapper {
+  max-width: 80%;
+}
+.footer-content__title {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--clr-Black);
+  margin-bottom: 1rem;
+}
+.footer-content__text {
+  line-height: 1.5;
+  color: var(--clr-Dark-Gray);
+}
+/* Media Querys ======================================= */
+@media (max-width: 991px) {
+  /* Header */
+  .header {
+    width: 50%;
+    display: flex;
+    padding: 5rem 5rem 0 2rem;
+  }
+  .header__burger {
+    display: block;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__logo {
+    margin: 0 auto;
+  }
+  .right-part {
+    width: 50%;
+  }
+  /* Footer */
+  .footer-content {
+    width: 50%;
+  }
+  .footer-image--left {
+    display: none;
+  }
+  .footer-image {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .content__title {
+    font-size: 2em;
+    margin-bottom: 2rem;
+    line-height: 1;
+  }
+  .content__text {
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  .content.active {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
+  /* Footer */
+  .footer-content__title {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 600px) {
+  .top-section {
+    flex-direction: column;
+  }
+  /* Header */
+  .header {
+    width: 100%;
+    padding: 5rem 5rem 0 2rem;
+  }
+  .btns {
+    right: 0;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    transform: translateX(0);
+  }
+  .btns__btn--prev {
+    height: 4rem;
+    width: 4rem;
+  }
+  .btns__btn--next {
+    height: 4rem;
+    width: 4rem;
+  }
+  .right-part {
+    width: 100%;
+  }
+  /* Footer */
+  .footer {
+    display: block;
+  }
+  .footer-content {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .footer-image--left {
+    display: block;
+  }
+  .footer-image {
+    width: 100%;
+    display: block;
+    height: 20rem;
+    margin-bottom: 5rem;
+  }
+  .footer-image:last-child {
+    margin-bottom: 0;
+  }
+}
