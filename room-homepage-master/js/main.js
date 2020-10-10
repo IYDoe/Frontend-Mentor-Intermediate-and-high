@@ -39,7 +39,6 @@ function showSlides(n) {
 
     let i;
     let slides = document.getElementsByClassName("content");
-    let slidesImg = document.getElementsByClassName("")
     if (n > slides.length) {
         slideIndex = 1
     }
