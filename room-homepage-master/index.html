@@ -10,13 +10,24 @@
 </head>
 
 <body>
+    <!-- Top section =============================== -->
     <div class="top-section">
         <!-- Header ======================================= -->
         <header class="header">
-            <!-- Burger menu ============================== -->
-            <div class="header__burger">
-                <img src="images/icon-hamburger.svg" alt="menu">
+            <!-- Menu toggle ============================== -->
+
+            <div class="menu-icon" id="menu-toggle">
+                <div class="menu-icon-line"></div>
             </div>
+            <!-- Burger menu ===============================-->
+            <nav class="burger__nav" id="mobile-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
             <!-- Logo ===================================== -->
             <figure class="header__logo">
                 <img src="images/logo.svg" alt="logo">
@@ -30,10 +41,22 @@
             </nav>
             <!-- Btns ===================================== -->
             <div class="btns">
-                <button class="btns__btn--prev"><svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
+                <button class="btns__btn--prev" onclick="minusSlide()"><svg width=" 14" height="24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" /></svg></button>
-                <button class="btns__btn--next"><svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
+                <button class="btns__btn--next" onclick="minusSlide()"><svg width=" 14" height="24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" /></svg></button>
+            </div>
+            <!-- Header slider ============================= -->
+            <div class="header-wrapper">
+                <figure class="header-image">
+                    <img class="header-image__item" src="images/desktop-image-hero-1.jpg" alt="img">
+
+                    <img class="header-image__item" src="images/desktop-image-hero-2.jpg" alt="img">
+
+                    <img class="header-image__item" src="images/desktop-image-hero-3.jpg" alt="img">
+                </figure>
             </div>
         </header>
         <!-- Content ======================================= -->
@@ -53,7 +76,7 @@
                             fill="#000" fill-rule="nonzero" /></svg></a>
             </div>
 
-            <div class="content active">
+            <div class="content">
                 <h2 class="content__title">We are available all across the globe</h2>
                 <p class="content__text">With stores all over the world, it's easy for you to find furniture for your
                     home or place of business.
@@ -82,8 +105,7 @@
 
         </div>
     </div>
-
-
+    <!-- Footer section =============================== -->
     <footer class="footer">
         <figure class="footer-image footer-image--left">
         </figure>
@@ -100,7 +122,6 @@
         <figure class="footer-image footer-image--right">
         </figure>
     </footer>
-
 
     <script src="js/main.js"></script>
 </body>
