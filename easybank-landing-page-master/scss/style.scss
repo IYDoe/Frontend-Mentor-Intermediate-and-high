@@ -1,0 +1,33 @@
+// Main colors ===================>
+$Dark-Blue: hsl(233, 26%, 24%);
+$Lime-Green: hsl(136, 65%, 51%);
+$Bright-Cyan: hsl(192, 70%, 51%);
+$Grayish-Blue: hsl(233, 8%, 62%);
+$Light-Grayish-Blue: hsl(220, 16%, 96%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$White: hsl(0, 0%, 100%);
+
+@import "_null.scss";
+@import "_header.scss";
+@import "_intro.scss";
+@import "_features.scss";
+@import "_articles.scss";
+@import "_footer.scss";
+
+body {
+    font-family: "Public Sans", sans-serif;
+}
+// button
+.btn--green {
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+    color: $White;
+    background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+    text-decoration: none;
+    transition: background 0.5s ease-in;
+    font-size: 1rem;
+
+    &:hover {
+        background: linear-gradient(to right, hsl(136, 82%, 66%), hsl(192, 76%, 69%));
+    }
+}
