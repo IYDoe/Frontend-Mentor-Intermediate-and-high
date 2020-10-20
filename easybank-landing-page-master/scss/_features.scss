@@ -1,0 +1,47 @@
+.features {
+    padding: 0 calc(50vw - 590px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $Light-Grayish-Blue;
+    &__content {
+        width: 60%;
+    }
+
+    &__title {
+        font-size: 2em;
+        font-weight: 400;
+        color: $Dark-Blue;
+        margin: 0 0 1.5rem 0;
+    }
+
+    &__text {
+        line-height: 1.5;
+        margin: 0 0 5rem 0;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.feature {
+    width: 23%;
+    &__img {
+        margin: 0 0 3rem 0;
+        max-width: 75px;
+    }
+
+    &__title {
+        font-size: 1.3em;
+        color: $Dark-Blue;
+        font-weight: 400;
+        margin: 0 0 1.5rem 0;
+    }
+
+    &__text {
+        line-height: 1.5;
+        font-size: 0.9em;
+    }
+}
