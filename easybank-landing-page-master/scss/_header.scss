@@ -1,0 +1,80 @@
+.header {
+    padding: 0 calc(50vw - 590px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: $White;
+    position: relative;
+    z-index: 10;
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__menu {
+        height: 100%;
+    }
+
+    &__menu-block {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 1rem 0 0;
+        position: relative;
+        cursor: pointer;
+        &:last-child {
+            margin: 0;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            background: transparent;
+            transition: background 0.3s linear;
+        }
+        &:hover:after {
+            background: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+        }
+        &:hover .header__link {
+            color: $Dark-Blue;
+        }
+    }
+
+    &__link {
+        font-size: 0.9em;
+        text-decoration: none;
+        color: $Grayish-Blue;
+        transition: all 0.3s linear;
+    }
+
+    &__menu-icon {
+    }
+
+    &__menu-mobile {
+        display: none;
+    }
+
+    &__menu-mobile-block {
+    }
+
+    &__item-mobile {
+    }
+
+    &__link-mobile {
+    }
+
+    &__button {
+        margin-left: auto;
+    }
+}

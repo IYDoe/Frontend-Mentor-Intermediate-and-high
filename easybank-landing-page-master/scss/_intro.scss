@@ -1,0 +1,33 @@
+.intro {
+    display: flex;
+    align-items: center;
+    padding: 0 calc(50vw - 590px);
+    background: url(../images/bg-intro-desktop.svg);
+    background-position: 700px -265px;
+    background-repeat: no-repeat;
+    background-size: 1300px;
+    height: 90vh;
+    position: relative;
+    &__content {
+        width: 40%;
+    }
+
+    &__title {
+        font-size: 3em;
+        font-weight: 400;
+        color: $Dark-Blue;
+        line-height: 1.2;
+        margin: 0 0 1rem 0;
+    }
+
+    &__text {
+        line-height: 1.4;
+        margin: 0 0 3rem 0;
+    }
+
+    &__image-img {
+        position: absolute;
+        top: -120px;
+        right: -130px;
+    }
+}
